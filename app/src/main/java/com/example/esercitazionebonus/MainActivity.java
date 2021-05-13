@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         username = findViewById(R.id.attrUsername);
         password = findViewById(R.id.attrPassword);
         login = findViewById(R.id.loginButton);
+        //modifica
 
     }
 
