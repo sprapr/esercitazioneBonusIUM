@@ -33,6 +33,7 @@ public class HomeActivity extends AppCompatActivity {
             if(extras == null) {
                 username = null;
             } else {
+                //Prendo i parametri dall'activity Main
                 username = extras.getString("username");
                 password = extras.getString("password");
                 citta = extras.getString("citta");
@@ -61,6 +62,13 @@ public class HomeActivity extends AppCompatActivity {
             homeBind.nomeCitta.setText(citta);
             homeBind.nomeDataNascita.setText(dataNascita);
         }
+
+        homeBind.gestisci.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //intent to user_manager
+            }
+        }));
 
         homeBind.logout.setOnClickListener((new View.OnClickListener() {
             @Override
