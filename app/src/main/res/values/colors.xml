@@ -3,4 +3,9 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="rosso">#DA0340</color>
+    <color name="giallo">#FDDC00</color>
+    <color name="grigio">#C1C1C1</color>
+    <color name="bianco">#FFFFFF</color>
+    <color name="giallino">#FFF1A7</color>
 </resources>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/wallpaper"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/bianco"
+            android:text="Home"
+            android:textSize="36sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/benvenuto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Olindio"
+            android:textSize="16dp"
+            android:textColor="@color/bianco"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/home" />
+
+        <TextView
+            android:id="@+id/i_tuoi_dati"
+            android:layout_width="wrap_content"
+            android:textColor="@color/bianco"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:paddingBottom="30dp"
+            android:text="I tuoi dati"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toTopOf="@id/username"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/benvenuto" />
+
+        <ImageView
+            android:id="@+id/admin_icon"
+            android:layout_width="50dp"
+            android:textColor="@color/bianco"
+            android:layout_height="50dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/ic_baseline_insert_emoticon_24"
+            android:visibility="gone"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/benvenuto"
+            app:layout_constraintTop_toTopOf="@id/i_tuoi_dati" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:paddingBottom="30dp"
+            android:text="Username:"
+            android:textSize="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/i_tuoi_dati"
+            android:textColor="@color/bianco"
+            />
+
+
+        <TextView
+            android:id="@+id/nome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Olivio"
+            android:textSize="20dp"
+            android:textColor="@color/bianco"
+            app:layout_constraintLeft_toLeftOf="@id/nomePassword"
+            app:layout_constraintTop_toTopOf="@id/username" />
+
+        <TextView
+            android:id="@+id/password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:paddingBottom="30dp"
+            android:text="Password:"
+            android:textColor="@color/bianco"
+            android:textSize="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/username" />
+
+        <TextView
+            android:id="@+id/nomePassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ovino"
+            android:textSize="20dp"
+            android:textColor="@color/bianco"
+            app:layout_constraintLeft_toLeftOf="@id/nomeCitta"
+            app:layout_constraintTop_toTopOf="@id/password" />
+
+        <TextView
+            android:id="@+id/citta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:paddingBottom="30dp"
+            android:text="Città:"
+            android:textColor="@color/bianco"
+            android:textSize="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/password" />
+
+        <TextView
+            android:id="@+id/nomeCitta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/bianco"
+            android:text="Ovilandia"
+            android:textSize="20dp"
+            app:layout_constraintLeft_toLeftOf="@id/nomeDataNascita"
+            app:layout_constraintTop_toTopOf="@id/citta" />
+
+        <TextView
+            android:id="@+id/dataNascita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/bianco"
+            android:layout_marginLeft="20dp"
+            android:text="Data di nascita:"
+            android:textSize="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/citta" />
+
+        <TextView
+            android:id="@+id/nomeDataNascita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Olzai"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="@id/dataNascita"
+            android:textColor="@color/bianco"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/dataNascita" />
+
+        <Button
+            android:id="@+id/gestisci"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@color/colorPrimary"
+            android:text="Gestisci utenti"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dataNascita"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@color/colorPrimary"
+            android:text="Logout"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gestisci"
+            />
+
+        <TextView
+            android:id="@+id/cambiaPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modifica password"
+            app:layout_constraintTop_toBottomOf="@id/logout"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:linksClickable="true"
+            android:visibility="visible"
+            android:layout_marginTop="10dp"
+            android:textSize="16dp" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
