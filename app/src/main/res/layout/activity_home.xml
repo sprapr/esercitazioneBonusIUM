@@ -28,11 +28,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:text="Olindio"
-            android:textSize="16dp"
-            android:textColor="@color/bianco"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/home" />
 
         <TextView
@@ -79,7 +74,7 @@
             android:id="@+id/nome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Olivio"
+            android:text="text"
             android:textSize="20dp"
             android:textColor="@color/bianco"
             app:layout_constraintLeft_toLeftOf="@id/nomePassword"
@@ -101,7 +96,7 @@
             android:id="@+id/nomePassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ovino"
+            android:text="text"
             android:textSize="20dp"
             android:textColor="@color/bianco"
             app:layout_constraintLeft_toLeftOf="@id/nomeCitta"
@@ -123,8 +118,8 @@
             android:id="@+id/nomeCitta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="text"
             android:textColor="@color/bianco"
-            android:text="Ovilandia"
             android:textSize="20dp"
             app:layout_constraintLeft_toLeftOf="@id/nomeDataNascita"
             app:layout_constraintTop_toTopOf="@id/citta" />
@@ -144,13 +139,15 @@
             android:id="@+id/nomeDataNascita"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Olzai"
+            android:text="text"
+            android:textColor="@color/bianco"
             android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="@id/dataNascita"
-            android:textColor="@color/bianco"
+            app:layout_constraintHorizontal_bias="0.583"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@id/dataNascita" />
+            app:layout_constraintTop_toTopOf="@id/dataNascita"
+            app:layout_constraintVertical_bias="0.0" />
 
         <Button
             android:id="@+id/gestisci"
