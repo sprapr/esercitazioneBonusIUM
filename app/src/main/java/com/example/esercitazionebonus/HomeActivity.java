@@ -18,8 +18,7 @@ import static com.example.esercitazionebonus.RegistrazioneActivity.MyPREFERENCES
 
 public class HomeActivity extends AppCompatActivity {
     ActivityHomeBinding homeBind;
-    private String username, password, confermaPassword, citta, dataNascita;
-
+    private String username, password, confermaPassword, citta, dataNascita, adminCheck;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,12 +37,14 @@ public class HomeActivity extends AppCompatActivity {
                 password = extras.getString("password");
                 citta = extras.getString("citta");
                 dataNascita = extras.getString("data");
+                adminCheck = extras.getString("adminCheck");
             }
         } else {
             username = (String) savedInstanceState.getSerializable("username");
         }
 
-        Log.i("c", username);
+        Log.i("c", username + adminCheck);
+
 
         /*Fa vedere soltanto i pulsanti che servono in base all'utente che entra*/
         if (username.equals("admin")){
@@ -52,7 +53,16 @@ public class HomeActivity extends AppCompatActivity {
             homeBind.cambiaPassword.setVisibility(View.GONE);
             homeBind.username.setText("Admin");
             homeBind.password.setText("Admin");
-            homeBind.citta.setText("Admin");
+            homeBind.citta.setVisibility(View.GONE);
+            homeBind.nomeDataNascita.setVisibility(View.GONE);
+        }
+        else if (adminCheck.equals("1")){
+            homeBind.adminIcon.setVisibility(View.VISIBLE);
+            homeBind.gestisci.setVisibility(View.VISIBLE);
+            homeBind.nome.setText(username);
+            homeBind.nomePassword.setText(password);
+            homeBind.nomeCitta.setText(citta);
+            homeBind.nomeDataNascita.setText(dataNascita);
         }
         else{
             homeBind.adminIcon.setVisibility(View.GONE);

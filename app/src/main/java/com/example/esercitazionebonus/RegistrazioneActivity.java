@@ -22,7 +22,7 @@ public class RegistrazioneActivity extends AppCompatActivity {
 
     private ActivityRegistrazioneBinding regBind;
 
-    private String username, password, confermaPassword, citta, dataNascita;
+    private String username, password, confermaPassword, citta, dataNascita, adminCheck;
 
     /*Shared preference*/
     SharedPreferences sharedpreferences;
@@ -43,7 +43,9 @@ public class RegistrazioneActivity extends AppCompatActivity {
                     sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedpreferences.edit();
 
-                    editor.putString(username, username + "-" + password + "-" + citta + "-" + dataNascita);
+                    adminCheck = "0";
+
+                    editor.putString(username, username + "-" + password + "-" + citta + "-" + dataNascita + "-" + adminCheck);
                     editor.commit();
 
                     Intent loginScreen = new Intent(RegistrazioneActivity.this, MainActivity.class);

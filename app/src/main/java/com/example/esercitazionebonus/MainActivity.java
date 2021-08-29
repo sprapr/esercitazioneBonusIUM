@@ -49,8 +49,8 @@ public class MainActivity extends AppCompatActivity {
         String insertPassword = bind.password.getText().toString();
 
         if (insertUsername.equals("admin") && insertPassword.equals("admin")){
-            Log.i("b","qui");
             toHome.putExtra("username", bind.username.getText().toString());
+            Log.i("b","qui");
             startActivity(toHome);
         }
 
@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 toHome.putExtra("password", arrayDati[1]);
                 toHome.putExtra("citta", arrayDati[2]);
                 toHome.putExtra("data", arrayDati[3]);
+                toHome.putExtra("adminCheck", arrayDati[4]);
                 startActivity(toHome);
             }
             else{

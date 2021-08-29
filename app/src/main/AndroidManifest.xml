@@ -19,6 +19,7 @@
         <activity android:name=".RegistrazioneActivity"/>
         <activity android:name=".HomeActivity"/>
         <activity android:name=".EditPasswordActivity"/>
+        <activity android:name=".UserManager"/>
 
     </application>
 
