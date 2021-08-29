@@ -66,7 +66,8 @@ public class HomeActivity extends AppCompatActivity {
         homeBind.gestisci.setOnClickListener((new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //intent to user_manager
+                Intent toManager = new Intent(HomeActivity.this, UserManager.class);
+                startActivity(toManager);
             }
         }));
 
