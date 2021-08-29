@@ -36,13 +36,11 @@ public class UserManager extends AppCompatActivity {
 
 
         sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
-        Map map = sharedpreferences.getAll();
 
-        Iterator<Map.Entry<String, String>> it = map.entrySet().iterator();
-        while (it.hasNext()) {
-            Map.Entry<String, String> pair = it.next();
-            list.add(pair.getKey());
-            Log.i("k", pair.getKey() + " " + pair.getValue());
+        Map<String,?> map = sharedpreferences.getAll();
+
+        for(Map.Entry<String,?> entry : map.entrySet()){
+            list.add(entry.getKey());
         }
 
         MyAdapter myAdapter = new MyAdapter(this, list);
