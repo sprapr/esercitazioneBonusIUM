@@ -51,20 +51,12 @@ public class HomeActivity extends AppCompatActivity {
             homeBind.adminIcon.setVisibility(View.VISIBLE);
             homeBind.gestisci.setVisibility(View.VISIBLE);
             homeBind.cambiaPassword.setVisibility(View.GONE);
-            homeBind.username.setText("Admin");
-            homeBind.password.setText("Admin");
-            homeBind.citta.setVisibility(View.GONE);
-            homeBind.nomeDataNascita.setVisibility(View.GONE);
+            homeBind.nome.setText("admin");
+            homeBind.nomePassword.setText("admin");
+            homeBind.nomeCitta.setText("Cagliari");
+            homeBind.nomeDataNascita.setText("13/06/1997");
         }
-        else if (adminCheck.equals("1")){
-            homeBind.adminIcon.setVisibility(View.VISIBLE);
-            homeBind.gestisci.setVisibility(View.VISIBLE);
-            homeBind.nome.setText(username);
-            homeBind.nomePassword.setText(password);
-            homeBind.nomeCitta.setText(citta);
-            homeBind.nomeDataNascita.setText(dataNascita);
-        }
-        else{
+        else if(adminCheck.equals("0")){
             homeBind.adminIcon.setVisibility(View.GONE);
             homeBind.gestisci.setVisibility(View.GONE);
             homeBind.nome.setText(username);
@@ -72,6 +64,15 @@ public class HomeActivity extends AppCompatActivity {
             homeBind.nomeCitta.setText(citta);
             homeBind.nomeDataNascita.setText(dataNascita);
         }
+        else{
+            homeBind.adminIcon.setVisibility(View.VISIBLE);
+            homeBind.gestisci.setVisibility(View.VISIBLE);
+            homeBind.nome.setText(username);
+            homeBind.nomePassword.setText(password);
+            homeBind.nomeCitta.setText(citta);
+            homeBind.nomeDataNascita.setText(dataNascita);
+        }
+
 
         homeBind.gestisci.setOnClickListener((new View.OnClickListener() {
             @Override

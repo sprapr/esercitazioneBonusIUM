@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
@@ -24,6 +26,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
     String dati;
     String username;
     SharedPreferences sharedpreferences;
+    Toast toast;
+    int duration = Toast.LENGTH_SHORT;
 
     String adminCheck;
 
@@ -31,21 +35,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
         this.list = list;
         this.context=context;
 
-       /* for (int i = 0; i < list.size(); i++) {
-            username = list.get(i);
-            if (sharedpreferences.contains(username)) {
-                dati = sharedpreferences.getString(username, null);
-                String[] arrayDati = dati.split("-");
 
-                if (username.equals(arrayDati[0])) {
-                    toHome.putExtra("username", arrayDati[0]);
-                    toHome.putExtra("password", arrayDati[1]);
-                    toHome.putExtra("citta", arrayDati[2]);
-                    toHome.putExtra("data", arrayDati[3]);
-                    startActivity(toHome);
-                }
-            }
-        }*/
     }
 
     @NonNull
@@ -77,9 +67,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
 
                     if (arrayDati[4].equals("0")){
                         adminCheck = "1";
+                        toast = Toast.makeText(context, "Ora è admin!", duration);
+                        toast.show();
                     }
-                    else adminCheck = "0";
-
+                    else {
+                        toast = Toast.makeText(context, "E' già admin", duration);
+                        toast.show();
+                    }
                     editor.putString(arrayDati[0], arrayDati[0] + "-" + arrayDati[1] + "-" + arrayDati[2] + "-" + arrayDati[3] + "-" + adminCheck);
                     editor.commit();
                 }

@@ -68,7 +68,7 @@ public class EditPasswordActivity extends AppCompatActivity {
                         dati = sharedpreferences.getString(username, null);
                         String[] arrayDati = dati.split("-");
 
-                        editor.putString(username, username + "-" + password + "-" + arrayDati[2] + "-" + arrayDati[3]);
+                        editor.putString(username, username + "-" + password + "-" + arrayDati[2] + "-" + arrayDati[3] + "-" + arrayDati[4]);
                         editor.commit();
 
                         Intent toHome = new Intent(EditPasswordActivity.this, HomeActivity.class);
@@ -76,6 +76,7 @@ public class EditPasswordActivity extends AppCompatActivity {
                         toHome.putExtra("password", password);
                         toHome.putExtra("citta", arrayDati[2]);
                         toHome.putExtra("data", arrayDati[3]);
+                        toHome.putExtra("adminCheck",arrayDati[4]);
                         startActivity(toHome);
                     }
                 }

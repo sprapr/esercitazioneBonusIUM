@@ -97,20 +97,15 @@
             android:layout_width="match_parent"
             android:layout_height="10dp" />
 
-        <com.google.android.material.textfield.TextInputLayout
+        <TextView
+            android:id="@+id/attrDataNascita"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="54dp"
+            android:textSize="20sp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:background="#9AFFFFFF"
-            android:hint="Data di nascita">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/attrDataNascita"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </com.google.android.material.textfield.TextInputLayout>
+            android:hint="Data di nascita"/>
 
         <Button
             android:id="@+id/registerButton"
